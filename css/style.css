@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+h1,
+h2 {
+  font-size: 20px;
+}
+
+.slack-username {
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+.slack-profile {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+  align-items: center;
+  height: 70vh;
+  background-color: #f5f5f5; /* Set the background color */
+  border: 1px solid #dddddd; /* Optional: Add a border */
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2); /* Add the box shadow */
+}
+
+a {
+  padding: 10px;
+  text-decoration: none;
+  background-color: rgb(42, 42, 158);
+  border-radius: 10px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 1px;
+  margin-top: 4px;
+  font-weight: 700;
+}
+
+.day {
+  margin-top: 5px;
+}
+
+.day,
+.utc-milli {
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
