@@ -1,26 +1,20 @@
-// array of the 7 days in a week
-function updateCurrentDayOfTheWeek() {
-  const daysOfWeek = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
-  const today = new Date();
-  const dayOfWeek = daysOfWeek[today.getUTCDay()];
-  document.querySelector('[data-testid="currentDayOfTheWeek"]').textContent = `Current Day of the week: ${dayOfWeek}`;
-}
-
-// Function to update the current UTC time
-function updateCurrentUTCTime() {
+function getCurrentDayOfWeek() {
+  const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
   const currentDate = new Date();
-  const currentUTCTimeMilliseconds = currentDate.getTime();
-  const currentUTCTimeElement = document.querySelector('[data-testid="currentUTCTime"]');
-  currentUTCTimeElement.textContent = `Current UTC Time: ${currentUTCTimeMilliseconds}`;
+  const dayOfWeek = daysOfWeek[currentDate.getUTCDay()];
+  return dayOfWeek;
 }
 
-updateCurrentUTCTime(); // Call this function once immediately
-updateCurrentDayOfTheWeek();
+
+function getCurrentLocalTime() {
+  const time = Date.now();
+  return time;
+}
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const currentDayElement = document.querySelector('[data-testid="currentDayOfTheWeek"]');
+  const currentUTCTimeElement = document.querySelector('[data-testid="currentUTCTime"]');
+  currentDayElement.textContent = getCurrentDayOfWeek();
+  currentUTCTimeElement.textContent = getCurrentLocalTime();
+});
