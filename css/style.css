@@ -1,85 +1,154 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:ital,wght@0,600;1,400&family=Poppins&display=swap');
+
+
+* {  margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
-}
-
-.profile {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  width: 100%;
+    background-color: #d4dbdd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 80%;
-  align-items: center;
-  height: 70vh;
-  background-color: #f5f5f5; /* Set the background color */
-  border: 1px solid #dddddd; /* Optional: Add a border */
-  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2); /* Add the box shadow */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    margin: 4 auto;
 }
 
-h1,
-h2 {
-  font-size: 16px;
+.profile-card{
+    max-width: 480px;
+    width: 100%;
+    background-color: whitesmoke;
+    border-radius: 24px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+    display: flex;
+    flex-direction: column;
+    position: relative;
 }
 
-[data-testid="slackUserName"] {
-  font-weight: 500;
+.profile-card::before{
+    content: '';
+    position: absolute;
+    height: 36%;
+    width: 100%;
+    border-radius: 24px 24px 0 0;
+    top: 0;
+    left: 0;
+    background: greenyellow;
+}
+.profile{
+   position: relative;
+   height: 200px;
+   width: 200px;
+   background-color: white;
+   padding: 4px;
+   border-radius: 50%;
 }
 
-[data-testid="slackDisplayImage"] {
-  width: 100px;
-  height: 100px;
-  margin-bottom: 10px;
+.profile img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
-img {
-  width: 100%;
-  border-radius: 50%;
+.info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 80%;
-  align-items: center;
-  height: 70vh;
-  background-color: #f5f5f5; /* Set the background color */
-  border: 1px solid #dddddd; /* Optional: Add a border */
-  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2); /* Add the box shadow */
+.info span{
+    margin-top: 16px;
+    font-family: "Poppins";
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 1.5;
+    color: rgba(0,0,0,0.95);
 }
 
-[data-testid="githubURL"] {
-  padding: 10px;
-  text-decoration: none;
-  background-color: rgb(42, 42, 158);
-  border-radius: 10px;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  gap: 1px;
-  margin-top: 4px;
-  font-weight: 700;
+.info p{
+    font-family: "poppins";
+    font-size: 20px;
+    font-weight: normal;
+    color: rgba(0,0,0,0.8);
+    line-height: 1.5;
+    margin-top: 6px;
 }
 
-[data-testid="currentDayOfTheWeek"] {
-  margin-top: 5px;
+.time {
+    display: flex;
+    gap: 24px;
+    padding: 28px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    font-size: 24px;
+    align-items: center; 
+    justify-content: center; 
+    background-color: #d0d9db;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    color: #333;
+    font-weight: bold;
+    font-family: "playfair display";
 }
 
-[data-testid="currentUTCTime"],[data-testid="currentDayOfTheWeek"] {
-  text-align: center;
-  margin-top: 5px;
-  margin-bottom: 5px;
+a{
+    margin-top: 30px;
+    padding: 16px;
+    font-size: 18px;
+    font-family: "opensans";
+    font-weight: 300;
+    border: 1px solid  rgb(41, 41, 206);
+    text-decoration: none;
+    color: #fff;
+    background-color: rgb(41, 41, 206);
+}
+
+a:hover{
+    font-weight: 900;
+    border: 3px solid rgb(0, 0, 0,0.8);
+}
+
+@media (max-width: 568px){
+    .container {
+        padding: 1rem;
+        margin: 1 auto;
+    }
+
+    .profile-card{
+        max-width: 340px;
+    }
+
+    .time{
+    gap: 20px;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    }
+    .info p, .info span{
+        font-size: 16px;
+    }
+
+    a{
+        margin-top: 14px;
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    a:hover{
+        font-weight: 600;
+        border: 2px solid rgb(0, 0, 0,0.8);
+        letter-spacing: 2px;
+    }
 }
