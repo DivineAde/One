@@ -2,51 +2,36 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FRONT-END TRACK | STAGE ONE TASK</title>
-
-    <!--=============== CSS ===============-->
+    <title>Profile Card</title>
     <link rel="stylesheet" href="/css/style.css" />
-
-    <!--=============== GOOGLE FONT ===============-->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;900&display=swap"
-      rel="stylesheet"
-    />
-
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
+    <script src="app.js"></script>
   </head>
   <body>
-    <div class="profile">
-      <div class="container">
-        <div>
-          <h1>
-            Slack Name:
-            <span data-testid="slackUserName">Divine Adeyeye</span>
-          </h1>
-        </div>
+    <section class="container profile-card">
+      <div class="profile">
         <img
           src="images/slackDivineAde.png"
           alt="Divine Adeyeye"
           data-testid="slackDisplayImage"
         />
-        <p data-testid="currentDayOfTheWeek">Monday</p>
-        <p data-testid="currentUTCTime">12 :00 PM UTC</p>
-        <p data-testid="myTrack">Track: Frontend</p>
-        <a
-          href="https://github.com/DivineAde/One"
-          target="_blank"
-          data-testid="githubURL"
-          >Github URL</a
-        >
       </div>
-    </div>
 
-    <script src="app.js"></script>
+      <div class="info">
+        <span data-testid="slackUserName">Divine Adeyeye</span>
+        <p data-testid="myTrack">Frontend</p>
+      </div>
+      <a
+        href="https://github.com/DivineAde/Stage-one-hng"
+        data-testid="githubURL"
+        target="_blank"
+        >Github URL</a
+      >
+      <div class="time">
+        <p class="currentday" data-testid="currentDayOfTheWeek">Monday</p>
+        <p class="curenttime" data-testid="currentUTCTime">12:00 PM UTC</p>
+      </div>
+    </section>
   </body>
 </html>
